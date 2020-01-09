@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- <meta name="description" content="Ideal template for game-related websites (gaming, communities, clans, guilds, news and entertainment content) but also for technology, CV or personal pages. Smart and compact. It's able to completely meet your needs. Unique design will increase the value of your page!">
+    <meta name="keywords" content="template, theme, html, css, bootstrap, game, event, culture, music, personal, cv">
+    <meta name="author" content="Jakub Kwarciński"> -->
+
+    <title>Shellmates</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+    <!-- Template styles -->
+    <link href="css/styles.css" media="screen" rel="stylesheet" type="text/css" title="orange">
+
+    <!-- Modernizr -->
+    <script type="text/javascript" src="js/modernizr-custom.min.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.png" type="image/png">
+
+</head>
+
+<body data-spy="scroll" data-offset="122" data-target="#main-menu" data-skrollr="true">
+    <div class="loader-overlay">
+        <div class="loader">
+            <img src="img/logo.png" alt="Shellmates" class="loader-logo">
+            <div class="loader-bar" id="loader-bar"></div>
+        </div>
+    </div>
+
+    <script>
+
+        class Stream {
+            constructor({ id, len }) {
+                this.element = document.getElementById(id)
+                this.len = len || 8
+                this.bits = []
+
+                this.thread = setInterval(() => this.update(), 500)
+            }
+
+            update() {
+                let digit = Math.round(Math.random())
+                let span = document.createElement('span')
+                span.innerText = digit
+
+                this.element.appendChild(span)
+                this.bits.push(span)
+
+                if (this.bits.length > 8) {
+                    this.element.removeChild(this.bits.splice(0, 1).pop())
+                }
+            }
+        }
+
+        let stream = new Stream({
+            id: 'loader-bar',
+            len: 8
+        })
+
+    </script>
+
+    <!-- Navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html" title="GameR">
+                     Shell<span class="main-color">mates</span></span>
+                </a><!-- Logo end -->
+            </div>
+            <!-- Main menu -->
+            <div class="collapse navbar-collapse" id="main-menu">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="#home">
+                            <span class="main-link">Home</span>
+                            <span class="additional-info-link bracket">
+                                welcome
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about">
+                            <span class="main-link">About</span>
+                            <span class="additional-info-link bracket">
+                                we are
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#gallery">
+                            <span class="main-link">Events</span>
+                            <span class="additional-info-link bracket">
+                                we organize
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#timeline" >
+                            <span class="main-link">History</span>
+                            <span class="additional-info-link bracket">
+                                timeline
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#partners">
+                            <span class="main-link">Partners</span>
+                            <span class="additional-info-link bracket">
+                                business friends
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="main-link">Contact <b class="caret"></b></span>
+                            <span class="additional-info-link bracket">
+                                stay in touch
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#contact-details">Contact details</a>
+                            </li>
+                            <li>
+                                <a href="#send-us-message">Send us message</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- Main menu end -->
+        </div>
+    </div><!-- Navbar end -->
+
+    <!-- Section home -->
+    <div class="section-home" id="home">
+        <div class="overlay"></div>
+        <!-- Particles -->
+        <canvas class="particles" id="particles"></canvas>
+        <div class="container">
+            <div class="section-home-content">
+                <div><img src="img/logo-medium.png" id="logo" alt="Shellmates"></div>
+                <div class="clearfix"></div>
+                <h1 class="system-header">{Where there is a <span class="highlight">shell</span> there is a <span class="highlight">way</span>}</h1>
+                <p class="section-description">
+                    Shellmates is a students club that is passionate about information security.
+                    Our objective is to create an InfoSec community, to motivate and encourage knowledge exchange in this field.
+                </p>
+
+                <ul class="list-inline">
+                    <li>
+                        <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" title="Dribble"><i class="fa fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="home-bg"></div>
+    </div>
+
+    <!-- Section about -->
+    <div class="standard-section section-about" id="about">
+        <div class="container">
+            <div class="text-center">
+                <h3 class="standard-subheader bracket" data-100p-top="transform[swing]:translateX(-25px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">who are we</h3>
+                <h2 class="standard-header" data-100p-top="transform[swing]:translateX(25px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">About</h2>
+            </div>
+            <div class="text-center" data-100p-top="transform[swing]:translateX(-25px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">
+                <div class="section-icon"><span><i class="fa fa-info"></i></span></div>
+            </div>
+            <p class="section-description text-center lead">
+                Shellmates club, is a group of highly motivated university students that are passionate
+	            about information security in general. Its diversity of members who are from different
+	            Wilayas & different universities is what makes it a special one.
+	            We strive to learn and develop our skills by working as a team in organized CTFs and
+	            creating our own CTFs for others to learn from our best members.
+            </p>
+                <div class="row">
+                <div class="col-sm-4">
+                    <div class="feature-box text-center">
+                        <span class="icon-circle-outer" >
+                            <span class="icon-circle-inner">
+                                <span class="glyphicon glyphicon-book"></span>
+                            </span>
+                        </span>
+                        <h3 class="feature-header bracket">Education</h3><p class="lines-header no-margin" data-100p-top="transform[swing]:scale(0.5);opacity[swing]:0" data-75p-top="transform[swing]:scale(1);opacity[swing]:1">Learn new <strong>stuff</strong>!</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="feature-box text-center">
+                        <span class="icon-circle-outer">
+                            <span class="icon-circle-inner">
+                                <span class="glyphicon glyphicon-tower"></span>
+                            </span>
+                        </span>
+                        <h3 class="feature-header bracket">Skills</h3>
+                        <p class="lines-header no-margin" data-100p-top="transform[swing]:scale(0.5);opacity[swing]:0" data-75p-top="transform[swing]:scale(1);opacity[swing]:1">Increase your <strong>skills</strong>!</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="feature-box text-center">
+                        <span class="icon-circle-outer" >
+                            <span class="icon-circle-inner">
+                                <span class="glyphicon glyphicon-thumbs-up"></span>
+                            </span>
+                        </span>
+                        <h3 class="feature-header bracket">Fun</h3>
+                        <p class="lines-header no-margin" data-100p-top="transform[swing]:scale(0.5);opacity[swing]:0" data-75p-top="transform[swing]:scale(1);opacity[swing]:1">Have <strong>fun</strong>!</p>
+                    </div>
+                </div>
+            </div>
+            <p></p>
+        </div>
+    </div>
+
+
+
+    <!-- Section gallery (portfolio) -->
+    <div class="standard-section section-portfolio" id="gallery">
+        <div class="container">
+            <div class="text-center">
+                <h3 class="standard-subheader bracket" data-100p-top="transform[swing]:translateX(-25px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">what we organize</h3>
+                <h2 class="standard-header" data-100p-top="transform[swing]:translateX(25px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">Events</h2>
+            </div>
+            <div class="text-center" data-100p-top="transform[swing]:translateX(-25px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">
+                <div class="section-icon"><span><i class="fa fa-map-marker"></i></span></div>
+            </div>
+            <p class="section-description text-center lead">Each year, <span class="main-color">Shellmates</span> organize many <span class="highlight">information security</span> events.</p>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="portfolio-item" data-100p-top="transform[swing]:translateX(-25px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">
+                        <div class="portfolio-image-container">
+                            <img class="img-responsive" src="img/hackini.jpg" alt="Hackini">
+                        </div>
+                        <i class="fa fa-picture-o portfolio-icon pull-right" aria-hidden="true"></i>
+                        <h4 class="portfolio-header"><a href="blog-item.html" title="Hack.INI">Hack.INI</a></h4>
+                        <p>
+                            HackINI is the annual computer security event that initiates amateurs and beginners in the field of computer security. The later has two main aspects : Computer Securty workshops and Capture The Flag (CTF) Competition.
+                            </ul>
+                        </p>
+
+
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="portfolio-item" data-100p-top="transform[swing]:translateY(-25px);opacity[swing]:0" data-75p-top="transform[swing]:translateY(0);opacity[swing]:1">
+                        <div class="portfolio-image-container">
+                            <img class="img-responsive" src="img/bsides.jpg" alt="BSides">
+
+                        </div>
+                        <i class="fa fa-picture-o portfolio-icon pull-right" aria-hidden="true"></i>
+                        <h4 class="portfolio-header"><a href="blog-item.html" title="Bsides Algiers">BSides Algiers</a></h4>
+                        <p>BSides is an international event that is 48h long in which there is Securty conferences, practical workshops and competitive Capture The Flag challenges. Shellmates organize the Algerian version, BSides Algiers.</p>
+
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="portfolio-item" data-100p-top="transform[swing]:translateX(25px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">
+                        <div class="portfolio-image-container">
+                            <img class="img-responsive" src="img/forumsit.jpg" alt="Forum SIT">
+                        </div>
+                        <i class="fa fa-picture-o portfolio-icon pull-right" aria-hidden="true"></i>
+                        <h4 class="portfolio-header"><a href="blog-item.html" title="Forum SIT">Forum SIT</a></h4>
+                        <p>This event gather Information Security professionals in Renaissance Hotel in Telemcen, Algeria. Its a platform of exchange and networking on the subject of Security Stratigies for networks, storage and the Cloud. With 30 partnerships, presence of 250 DS/DSSI and the elaboration of 25 conferences and workshops, Forum SIT is the lighthouse of Information Security in Algeria.</p>
+
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="portfolio-item" data-100p-top="transform[swing]:translateX(-25px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">
+                        <div class="portfolio-image-container">
+                            <img class="img-responsive" src="img/hacktillshour.jpg" alt="Hack Till S'hour">
+                        </div>
+                        <i class="fa fa-picture-o portfolio-icon pull-right" aria-hidden="true"></i>
+                        <h4 class="portfolio-header main-color"><a href="blog-item.html" title="Hack Til S'hour">Hack Till S'hour</a></h4>
+                        <p>In the time of Ramadhan and its spirituality, Shellmates provoke InfoSec geeks' intelligence by proposing CTF challenges from Ftour to s'hour. An opportunity for fun and traditional atmosphere.</p>
+
+                    </div>
+                </div>
+                <div class="clearfix visible-sm"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section timeline -->
+    <div class="standard-section section-gray section-timeline" id="timeline">
+        <div class="container">
+            <div class="text-center">
+                <h3 class="standard-subheader bracket" data-100p-top="transform[swing]:translateX(-25px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">our history</h3>
+                <h2 class="standard-header" data-100p-top="transform[swing]:translateX(25px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">Timeline</h2>
+            </div>
+            <div class="text-center" data-100p-top="transform[swing]:translateX(-25px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">
+                <div class="section-icon"><span><i class="fa fa-calendar"></i></span></div>
+            </div>
+            <p class="section-description text-center lead">In this section you can <span class="highlight">follow</span> the history of <span class="highlight"><span class="main-color">Shell</span>mates</span>. This timeline contain all <strong>important dates</strong> of the <span class="highlight">club</span>.</p>
+            <div class="timeline no-margin">
+                <div class="timeline-block">
+                    <div class="timeline-img" data-100p-top="transform[swing]:scale(0)" data-75p-top="transform[swing]:scale(1)">
+                        <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                    </div>
+                    <div class="timeline-content" data-100p-top="transform[swing]:translateX(-50px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">
+                        <span class="timeline-date">
+                            <span>19-12-2011</span>
+                        </span>
+                        <div class="timeline-feature">
+                            <i class="fa fa-power-off" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="timeline-header">
+                            Club birth as OWASP Algeria Student Chapter
+                        </h3>
+                        <img class="img-responsive" src="img/presidents/hani_benahabiles.jpg" alt="Hani Benhabiles">
+                        <div class="timeline-description">
+                            <p>Hani Benhabiles was the creator of the club and its first president. He is now {POSITION HERE}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-block">
+                    <div class="timeline-img" data-100p-top="transform[swing]:scale(0)" data-75p-top="transform[swing]:scale(1)">
+                        <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                    </div>
+                    <div class="timeline-content" data-100p-top="transform[swing]:translateX(50px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">
+                        <span class="timeline-date">
+                            <span>2012-12</span>
+                        </span>
+                        <div class="timeline-feature">
+                            <i class="fa fa-cogs" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="timeline-header">
+                            OWASP SC Algeria is now Shellmates
+                        </h3>
+                        <img class="img-responsive" src="img/presidents/sabrina_amrouche.jpg" alt="Sabrina Amrouche">
+                        <div class="timeline-description">
+                            Since this date, the club is know as Shellmates instead of OWASP Student Chapter Algeria.
+                            It was lead by Sabrina Amrouche who's now a PhD student in Meyrin, Canton of Geneva, Switzerland.
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-block">
+                    <div class="timeline-img" data-100p-top="transform[swing]:scale(0)" data-75p-top="transform[swing]:scale(1)">
+                        <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                    </div>
+                    <div class="timeline-content" data-100p-top="transform[swing]:translateX(-50px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">
+                        <a href="blog-item.html" title="Work in progress" class="frame"></a>
+                        <span class="timeline-date">
+                            <span>2013/2014</span>
+                        </span>
+                        <div class="timeline-feature">
+                            <i class="fa fa-hourglass-start" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="timeline-header">
+                            Nawel Medjkoune Presidency
+                        </h3>
+                        <img class="img-responsive" src="img/presidents/nawel_medjkoune.jpg" alt="Work in progress">
+                        <div class="timeline-description">
+                            <p>Nawel Medjkoune is now a Data Scientist at Saegus, Paris.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-block">
+                    <div class="timeline-img" data-100p-top="transform[swing]:scale(0)" data-75p-top="transform[swing]:scale(1)">
+                        <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                    </div>
+                    <div class="timeline-content" data-100p-top="transform[swing]:translateX(50px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">
+                        <span class="timeline-date">
+                            <span>2014/2015</span>
+                        </span>
+                        <div class="timeline-feature">
+                            <i class="fa fa-bug" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="timeline-header">
+                            Hamza Bensmail Presidency
+                        </h3>
+                        <img class="img-responsive" src="img/presidents/hamza_bensmail.jpg" alt="Hamza Bensmail">
+                        <div class="timeline-description">
+                            <p>Hamza Bensmail is a graduated Computer Science Engineer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-block">
+                    <div class="timeline-img" data-100p-top="transform[swing]:scale(0)" data-75p-top="transform[swing]:scale(1)">
+                        <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                    </div>
+                    <div class="timeline-content" data-100p-top="transform[swing]:translateX(-50px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">
+                        <span class="timeline-date">
+                            <span>2015/2016</span>
+                        </span>
+                        <div class="timeline-feature">
+                            <i class="fa fa-gamepad" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="timeline-header">
+                            Bouchra Salah Presidency
+                        </h3>
+                        <img class="img-responsive" src="img/presidents/bouchra_s.jpg" alt="Alfa version released">
+                        <div class="timeline-description">
+                            {POSITION HERE}
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-block">
+                    <div class="timeline-img" data-100p-top="transform[swing]:scale(0)" data-75p-top="transform[swing]:scale(1)">
+                         <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                    </div>
+                    <div class="timeline-content" data-100p-top="transform[swing]:translateX(50px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">
+                        <span class="timeline-date">
+                            <span>2016/2017</span>
+                        </span>
+                        <div class="timeline-feature">
+                            <i class="fa fa-flag-checkered" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="timeline-header">
+                            Abderrahmane Mechri Presidency
+                        </h3>
+                        <img class="img-responsive" src="img/presidents/abderrahmane_mechri.jpg" alt="Abderrahmane Mechri">
+                        <div class="timeline-description">
+                            <p>Consultant at Digital Security - Econocom, Palaiseau, Île-de-France</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-block">
+                    <div class="timeline-img" data-100p-top="transform[swing]:scale(0)" data-75p-top="transform[swing]:scale(1)">
+                         <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                    </div>
+                    <div class="timeline-content" data-100p-top="transform[swing]:translateX(50px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">
+                        <span class="timeline-date">
+                            <span>2017/2018</span>
+                        </span>
+                        <div class="timeline-feature">
+                            <i class="fa fa-flag-checkered" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="timeline-header">
+                            Yousra Benzeghiba Presidency
+                        </h3>
+                        <img class="img-responsive" src="img/presidents/yousra_benzeghiba.jpg" alt="Yousra Benzeghiba">
+                        <div class="timeline-description">
+                            <p>Intern at Natixis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section partners (carousel) -->
+    <div class="standard-section section-promo section-partners" id="partners">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="text-center">
+                <h3 class="standard-subheader bracket" data-100p-top="transform[swing]:translateX(-25px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">business friends</h3>
+                <h2 class="standard-header" data-100p-top="transform[swing]:translateX(25px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">Partners</h2>
+            </div>
+
+            <div class="row partners">
+                <div class="col-sm-6">
+                    <a href="https://www.smartsolutions.hosting" class="partner">
+                        <img src="img/ssh.png" class="responsive-img" alt="SSH">
+                    </a>
+                </div>
+
+                <div class="col-sm-6">
+                    <a href="https://www.adextechnology.dz" class="partner">
+                        <img src="img/adex.png" class="responsive-img" alt="Adex">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Section contact details -->
+    <div class="standard-section section-contact-details" id="contact-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div data-100p-top="transform[swing]:translateX(-25px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">
+                        <h3>Contact Details</h3>
+                        <p>You can find us at the Higher National School of Computer Science, Algiers - Algeria.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div data-100p-top="transform[swing]:translateX(25px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">
+                        <h3><span class="main-color">shellmates</span>@esi.dz</h3>
+                        <p class="bracket">BP 68M OUED SMAR, 16309</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section send us message (contact form) -->
+    <div class="standard-section section-promo section-send-us-message" id="send-us-message">
+        <div class="triangle triangle-up" data-100p-top="top[swing]:-54px" data-75p-top="top[swing]:-24px">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+        </div>
+        <div class="triangle triangle-down" data-100p-top="bottom[swing]:-70px" data-75p-top="bottom[swing]:-40px">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+        </div>
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="text-center">
+                <h3 class="standard-subheader bracket" data-100p-top="transform[swing]:translateX(-25px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">keep in touch</h3>
+                <h2 class="standard-header" data-100p-top="transform[swing]:translateX(25px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">Send us message</h2>
+            </div>
+            <div class="text-center" data-100p-top="transform[swing]:translateX(-50px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">
+                <div class="section-icon"><span><i class="fa fa-envelope"></i></span></div>
+            </div>
+            <p class="section-description text-center lead">Don't hesitate to <span class="highlight">contact with us</span>. If you have any questions, you can use the <span class="highlight">form below</span>. We will <span class="highlight">answer</span> <strong>as soon as possible</strong>!</p>
+            <form class="form-container form" method="POST" action="#">
+                <div class="overlay"></div>
+                <div class="form-content">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div data-100p-top="transform[swing]:translateX(-25px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">
+                                <div class="form-group has-feedback">
+                                    <input type="text" class="form-control" placeholder="Enter name">
+                                    <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <input type="email" class="form-control" placeholder="Enter email">
+                                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <input type="text" class="form-control" placeholder="Enter phone">
+                                    <span class="glyphicon glyphicon-phone form-control-feedback"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div data-100p-top="transform[swing]:translateX(25px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="3" cols="40" placeholder="Your Message"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-md-offset-9">
+                            <div data-100p-top="transform[swing]:translateX(25px);opacity[swing]:0" data-75p-top="transform[swing]:translateX(0);opacity[swing]:1">
+                                <button type="submit" class="btn btn-primary btn-block">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center" id="follow-us">
+        <div class="container">
+        <p>Shellmates</span> &copy;2018</p>
+            <ul class="list-inline">
+                <li>
+                    <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="#" title="Dribble"><i class="fa fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="#" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                </li>
+            </ul>
+            <p>Proudly hosted by <a href="https://www.smartsolutions.hosting">ssh</a></p>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <div id="toTop" class="to-top">
+        <a href="#" class="To the top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    </div>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- jQuery parallax -->
+    <script type="text/javascript" src="js/jquery.parallax-1.1.3-min.js"></script>
+
+    <!-- skrollr -->
+    <script type="text/javascript" src="js/skrollr.min.js"></script>
+
+    <!-- raphael -->
+    <script src="js/raphael.min.js"></script>
+
+    <!-- particles -->
+    <script src="js/TweenLite.min.js"></script>
+    <script src="js/EasePack.min.js"></script>
+    <script src="js/rAF.min.js"></script>
+    <script src="js/particles.js"></script>
+
+    <!-- Custom javascript -->
+    <script type="text/javascript" src="js/custom.js"></script>
+
+    <!-- Main page javascript -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
