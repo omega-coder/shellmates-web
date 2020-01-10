@@ -3402,12 +3402,12 @@ th {
   box-sizing: border-box;
 }
 html {
-  font-size: 10px;
+  font-size: 12px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: monospace, 'Arial', 'Helvetica', sans-serif;
-  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
   line-height: 1.42857143;
   color: #fff;
   background-color: #1B1B1B;
@@ -3616,7 +3616,7 @@ p {
 .lead {
   margin-bottom: 22px;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.4;
 }
 @media (min-width: 768px) {
@@ -7285,7 +7285,7 @@ a.badge:focus {
 .jumbotron p {
   margin-bottom: 15px;
   font-size: 24px;
-  font-weight: 200;
+  font-weight: 400;
 }
 .jumbotron > hr {
   border-top-color: #919191;
@@ -9085,7 +9085,7 @@ body {
 }
 body {
   overflow-x: hidden;
-  font-weight: 300;
+  font-weight: 400;
 }
 a {
   color: #96dd1c;
@@ -9232,7 +9232,7 @@ a {
 }
 @media (min-width: 768px) {
   .navbar.basic {
-    padding-top: 20px;
+    padding-top: 0px;
   }
 
   .navbar.basic .navbar-nav > li > a {
@@ -9258,7 +9258,7 @@ a {
   color: #fff;
   font-family: 'Press Start 2P', 'Courier New', cursive;
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 30px;
   -webkit-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
@@ -9466,7 +9466,7 @@ a {
 .sidebar .sidebar-header {
   margin: 0 0 5px;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 50px;
   text-transform: uppercase;
 }
@@ -9924,8 +9924,8 @@ a {
   color: #FFF;
 }
 .portfolio-item img {
-  padding: 4px;
-  border: 1px solid #555555;
+  padding: 0px;
+  border: 5px solid #110f12;
   margin-bottom: 10px;
 }
 .portfolio-icon {
@@ -10135,7 +10135,7 @@ a {
   color: #FFF;
   font-size: 0.9em;
   line-height: 1.1;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
   -webkit-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
@@ -10464,10 +10464,11 @@ a {
   border-color: #292929;
 }
 .section-portfolio {
-  background: url("../img/image-5.jpg") center center no-repeat;
+  background: url("https://res.cloudinary.com/https-omega-coder-github-io/image/upload/b_rgb:000000,c_scale,e_blur:1000,h_3648,o_47,q_53/v1578621241/charles-pjAH2Ax4uWk-unsplash.jpg");
   background-size: cover;
-  padding-bottom: 80px;
+  padding-bottom: 100px;
 }
+
 .section-testimonials .standard-header {
   margin-bottom: 80px;
 }
@@ -12163,7 +12164,8 @@ del {
 }
 
 .portfolio-item h4 {
-    border-bottom: 1px solid #444;
+    font-family: "Roboto", sans-serif;
+    border-bottom: 1px solid #96dd1c;
     padding-bottom: 5px;
 }
 
