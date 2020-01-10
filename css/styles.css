@@ -12180,3 +12180,11 @@ del {
 .footer p, .footer .list-inline {
     margin: 20px 0;
 }
+
+#poweredby {
+  color: #f7f7f7;
+}
+
+#follow-us {
+  padding-bottom: 30px;
+}
